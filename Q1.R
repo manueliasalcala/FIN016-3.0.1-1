@@ -18,5 +18,5 @@ hist(pool_resid, main = "Residuales de modelo POOL", col = heat.colors(15))
 #We next plot the residual series.
 ts.plot(pool_resid, main = "Residuales de modelo POOL", xlab = "Fecha-Valor", ylab = "Error Ajuste Inversión", col = "Blue")
 
-#We run a second model.
+#We run the fixed effects model.
 within <- plm(Invest ~ Value + Capital, data = data, model = "within")
