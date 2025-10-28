@@ -11,5 +11,6 @@ head(data)
 pool <- plm(Invest ~ Value + Capital, data = data, model = "pooling")
 summary(pool)
 
-#And save the residuals.
+#And save the residuals and get their histogram.
 pool_resid <- residuals(pool)
+hist(pool_resid, main = "Residuales de modelo POOL", col = heat.colors(15))
