@@ -4,3 +4,4 @@ library(plm)
 data <- read_excel("DATAUSS.xlsx")
 data <- pdata.frame(data, index = c("Fecha", "CORP"))
 
+pool <- plm(Invest ~ Value + Capital, data = data, model = "pooling")
