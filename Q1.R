@@ -20,3 +20,6 @@ ts.plot(pool_resid, main = "Residuales de modelo POOL", xlab = "Fecha-Valor", yl
 
 #We run the fixed effects model.
 within <- plm(Invest ~ Value + Capital, data = data, model = "within")
+
+#And the Wallce-Hussein Model
+wahu <- plm(Invest ~ Value + Capital, data = data, model = "random", random.method = "walhus")
