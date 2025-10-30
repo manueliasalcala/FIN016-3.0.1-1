@@ -1,4 +1,3 @@
-install.packages("plm")
 library(readxl)
 library(plm)
 data <- read_excel("DATAUSS.xlsx")
@@ -23,3 +22,8 @@ within <- plm(Invest ~ Value + Capital, data = data, model = "within")
 
 #And the Wallce-Hussein Model
 wahu <- plm(Invest ~ Value + Capital, data = data, model = "random", random.method = "walhus")
+summary(wahu)
+
+#Amemiya method
+amemiya <- plm(Invest ~ Value + Capital, data = data, model = "random", random.method = "amemiya")
+summary(amemiya)
