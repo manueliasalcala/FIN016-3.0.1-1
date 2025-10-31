@@ -1,0 +1,11 @@
+library(readxl)
+library(plm)
+data <- read_excel("Assessment Data.xlsx")
+x11
+coplot(C ~ I | TRUE, type = "l", data = data)
+x11()
+coplot(Q ~ I | TRUE, type = "l", data = data)
+x11()
+coplot(PF ~ I | TRUE, type = "l", data = data)
+x11()
+coplot(LF ~ I | TRUE, type = "l", data = data)
